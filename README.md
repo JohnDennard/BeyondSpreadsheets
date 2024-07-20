@@ -13,5 +13,5 @@ mvn spring-boot:run
 then go to http://localhost:8080
 
 
-NOTE: MUST edit application.properties file to include your own personal username and password for MySQL. Additionally, must change the datasource.url in this file to whichever port your MySQL runs on.
+NOTE: MUST edit application.properties and the persistence.xml file to include your own personal username and password for MySQL. Additionally, must change the datasource.url in this file to whichever port your MySQL runs on.
       You must also import the db.sql file to MySQL workbench and run it in an existing database before running the mvn commands above.
