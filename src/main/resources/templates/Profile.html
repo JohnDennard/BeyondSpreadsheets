@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Loans And Debt</title>
+    <link rel="stylesheet" th:href="@{/App.css}"/>
+
+</head>
+
+<body>
+<!--remove navbar for this page?-->
+<div class="dropdown">
+    <span class="no-link">Loans and Debt</span>
+    <div class="dropdown-content">
+        <a href="/LoansAndDebt">Create Loan/Debt Information</a>
+        <a href="/LoansUpdateAmount">Update Amount Outstanding</a>
+    </div>
+</div>
+<div class="dropdown">
+    <span class="no-link">Revenue</span>
+    <div class="dropdown-content">
+        <a href="/CalculateRevenueIncome">Calculate Net Income</a>
+    </div>
+</div>
+<a href="/expenses">Expenses</a> <!--no dropdown for now-->
+<div class="dropdown">
+    <span class="no-link">Milestones</span>
+    <div class="dropdown-content">
+        <a href="/CreateMilestone">Create Milestone</a>
+    </div>
+</div>
+<a href="/Summary">Summary</a>
+<div id="navLoginButton" class="login-button">
+    <a href="/login" id="loginLink">Login</a>
+</div>
+</div> <!--navbar end-->
+
+<div class="profile-content">
+    <h2>User Profile:</h2>
+    <div class="profile-info">
+        <p><strong>Username:</strong> <span id="usernameDisplay"></span></p>
+        <p><strong>Email:</strong> <span id="emailDisplay"></span></p>
+    </div>
+</div>
+<div class="signOutButton">
+    <button type="submit">Sign Out</button>
+</div>
+
+<script src="scriptName.js" defer></script> <!--I could not find the .js file on the Google Drive-->
+
+</body>
+
+</html>

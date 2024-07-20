@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Loans And Debt</title>
+    <link rel="stylesheet" th:href="@{/App.css}"/>
+
+</head>
+
+<body>
+    <div class="navbar"> <!--navbar start-->
+        <a href="/">Beyond Spreadsheets</a>
+        <div class="dropdown">
+            <span class="no-link">Loans and Debt</span>
+            <div class="dropdown-content">
+                <a href="/LoansAndDebt">Create Loan/Debt Information</a>
+                <a href="/LoansUpdateAmount">Update Amount Outstanding</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <span class="no-link">Revenue</span>
+            <div class="dropdown-content">
+                <a href="/CalculateRevenueIncome">Calculate Net Income</a>
+            </div>
+        </div>
+        <a href="/expenses">Expenses</a> <!--no dropdown for now-->
+        <div class="dropdown">
+            <span class="no-link">Milestones</span>
+            <div class="dropdown-content">
+                <a href="/CreateMilestone">Create Milestone</a>
+            </div>
+        </div>
+        <div id="navLoginButton" class="login-button">
+            <a href="/login" id="loginLink">Login</a>
+        </div>
+    </div> <!--navbar end-->
+
+<div class="update-loans-header-row" style="background-image: url('/images/update-loan.jpg');">
+    <div class = "overlay-text">
+        <h1>Update Amount Outstanding</h1>
+    </div>
+</div>
+<div class="content-main">
+    <h2>Loans and Debt</h2>
+    <p>
+        Create your own milestones to help keep yourself on track to reaching
+        your financial goals.
+    </p>
+    <p id="doot"></p>
+</div>
+<div class="loans-content-row">
+    <div class="loans-content-column">
+        <h2>Update Amount Outstanding</h2>
+        <form id="amountOutstandingForm">
+            <div class="form-group">
+                <label for="payAmount">Amount Paid:</label>
+                <input type="number" step="100" id="payAmount" name="payAmount" required>
+            </div>
+            <div class="form-group">
+                <label for="debtPayDate">Date of payment:</label>
+                <input type="date" id="debtPayDate" name="debtDueDate"> <!--not required in case they paid total amount, might coincide with is_active-->
+            </div>
+            <div class="formSubmitButton">
+                <button type="button" onClick="onSubmitDebt()">Submit</button>
+            </div>
+            
+        </form>
+    </div>
+    <div class="loans-content-column">
+        <h2>Amount Outstanding Summary</h2>
+        <p></p>
+    </div>
+    <div class="loans-content-column">
+        <h2>Visual Data</h2>
+        <p></p>
+    </div>
+</div>
+
+
+</body>
+
+</html>

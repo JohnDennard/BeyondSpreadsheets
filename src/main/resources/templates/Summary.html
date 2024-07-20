@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Loans And Debt</title>
+    <link rel="stylesheet" th:href="@{/App.css}"/>
+
+</head>
+
+<body>
+    <div class="navbar"> <!--navbar start-->
+        <a href="/">Beyond Spreadsheets</a>
+            <div class="dropdown">
+                <span class="no-link">Loans and Debt</span>
+                <div class="dropdown-content">
+                    <a href="/LoansAndDebt">Create Loan/Debt Information</a>
+                    <!--<a href="/LoansUpdateAmount">Update Amount Outstanding</a> -->
+                </div>
+            </div>
+            <div class="dropdown">
+                <span class="no-link">Revenue</span>
+                <div class="dropdown-content">
+                    <a href="/CalculateRevenueIncome">Calculate Net Income</a>
+                </div>
+            </div>
+            <a href="/expenses">Expenses</a> <!--no dropdown for now-->
+            <div class="dropdown">
+                <span class="no-link">Milestones</span>
+                <div class="dropdown-content">
+                    <a href="/CreateMilestone">Create Milestone</a>
+                </div>
+            </div>
+            <a href="/Summary">Summary</a>
+        <a href="/logout">Logout</a>
+    </div> <!--navbar end-->
+
+<div class="summary-header-row">
+    <div class = "overlay-text">
+        <h1>Overall Summary</h1>
+    </div>
+</div>
+
+
+<div class="summary-content-row">
+    <div class="summary-content-column">
+        <h2>Loans and Debt</h2>
+        <p></p>
+    </div>
+    <div class="summary-content-column">
+        <h2>Revenue</h2>
+        <p></p>
+    </div>
+    <div class="summary-content-column">
+        <h2>Milestones</h2>
+        <p></p>
+    </div>
+</div>
+
+</body>
+
+</html>
